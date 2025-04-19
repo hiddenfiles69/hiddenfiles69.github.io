@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> Hidden Files </title>
+        <link rel="icon" href="icon.png" type = "image/x-icon">
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="feed-style.css">
+    </head>
+
+    <body> 
+        <nav> 
+            <div class="logo"> 
+                <a href="#"><img src="logo.png" alt="Hidden Files Logo"></a>
+            </div>
+
+            <div class="searchbox-container">
+                <form role="search" id="form" action="#" method="get">
+                    <input type="search" id="query" name="q"
+                     placeholder="Search..."
+                     aria-label="Search Hidden Files">
+                    <button class="search" aria-label="Search">
+                      <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                    </button>
+                  </form>
+            </div>
+
+            <ul class="nav-links">
+                <li> <a href="#" class="confess"> <i class="fa fa-pencil"></i> Confess </a></li>
+                <li>
+                    <a href="#" class="notification"> 
+                        <i class="fa-solid fa-bell"></i>
+                        <span>Notification</span>
+                        <span class="badge" aria-label="14 unread notifications">14</span>               
+                    </a>
+                </li>
+                <li class="profile-container">
+                    <a class="profile" href="#" id="profile-btn">GianCal</a>
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <div class="dropdown-caret"></div>
+                        <a href="#">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <section id="feed">
+            <div class="post-template">
+                <div class="post-info">
+                   <div class="user"> <a class="user-profile" href = "#" >  @selenedipity </a> </div> 
+                   <div class="date-posted"> 2 hours ago </div>
+                   <div class="post-actions">
+                    <button class="action-btn"><i class="fa-solid fa-ellipsis"></i></button>
+                    <div class="action-dropdown">
+                     <div class="report-caret"></div>
+                        <button class="report-btn">Report Post</button>
+                    </div>
+                </div>
+             </div>
+
+                <div class="post-text"> 
+                    <div class="post-title"> Lovefession </div>
+                    <div class="post-body"> 
+                        Matagal ko nang crush si Kyle. As in, since first year pa. Tahimik lang ako palagi, 
+                        pero lagi ko siyang inaabangan pag papasok na sa room, tapos kunwari busy ako sa notes ko. Minsan, kunwari 
+                        nagtanong ako sa kanya kahit alam ko na 'yung sagot — para lang marinig ko 'yung boses niya. Ang dami ko 
+                        nang drafts ng message sa chat, pero laging hindi ko ma-send. Kasi friends kami, and I'm scared na baka 
+                        pag nalaman niya,..
+                    </div>
+                </div>
+                <div class="post-btns"> 
+                    <div class="readmore-btn"> 
+                        <a href="#" class="more-btn" id="read-more-btn"> Read More </a>
+                    </div>
+                    <div class="reaction-btn">
+                        <div class="heart-btn"> 
+                            <button class="heart" id="like-btn"><i class="fa-regular fa-heart"></i></button>
+                            <div class="like-count" id="like-count"> 506 </div>
+                        </div>
+                        <div class="comment-btn">
+                            <button class="comment"> <i class="fa-regular fa-comment"></i> </button>
+                            <div class="comment-count"> 3 </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+
+           <div class="post-template">
+            <div class="post-info">
+               <div class="user"> <a class="user-profile" href = "#" >  BossAngeliMapagmahal </a> </div> 
+               <div class="date-posted"> 8 hours ago </div>
+               <div class="post-actions">
+                <button class="action-btn"><i class="fa-solid fa-ellipsis"></i></button>
+                <div class="action-dropdown">
+                 <div class="report-caret"></div>
+                    <button class="report-btn">Report Post</button>
+                </div>
+            </div>
+         </div>
+
+            <div class="post-text"> 
+                <div class="post-title"> Best in Two-Face: classmate edition </div>
+                <div class="post-body"> 
+                    Si Ate JE talaga, ibang level ng kaplastikan. Sa personal, super bait, pa-sweet, at 
+                    laging may pa-“love u sis!” kahit kahapon lang pinagchismisan ka niya. Sa GC, todo cheer 
+                    sa mga kaibigan, pero may separate GC pala na puro hanash at panlalait! Pag may sumikat 
+                    na kaklase, bigla siyang close—“Miss u na bestie!” kahit hindi naman sila nagkakausap dati. 
+                    Tapos ‘pag may event, uunahan ka sa group pic, pero never kang ....
+                </div>
+            </div>
+            <div class="post-btns"> 
+                <div class="readmore-btn"> 
+                    <a href="#" class="more-btn" id="read-more-btn"> Read More </a>
+                </div>
+                <div class="reaction-btn">
+                    <div class="heart-btn"> 
+                        <button class="heart" id="like-btn"><i class="fa-regular fa-heart"></i></button>
+                        <div class="like-count" id="like-count"> 302 </div>
+                    </div>
+                    <div class="comment-btn">
+                        <button class="comment"> <i class="fa-regular fa-comment"></i> </button>
+                        <div class="comment-count"> 1 </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+
+       <div class="post-template">
+        <div class="post-info">
+           <div class="user"> <a class="user-profile" href = "#" >  GianCal </a> </div> 
+           <div class="date-posted"> 12 hours ago </div>
+           <div class="post-actions">
+            <button class="action-btn"><i class="fa-solid fa-ellipsis"></i></button>
+            <div class="action-dropdown">
+             <div class="report-caret"></div>
+                <button class="report-btn">Report Post</button>
+            </div>
+        </div>
+     </div>
+
+        <div class="post-text"> 
+            <div class="post-title"> I have this bossy na kaklase </div>
+            <div class="post-body"> 
+                Si Attecco, ‘yung kaklase naming Grabe, parang siya na talaga ang teacher sa classroom. 
+                Kahit simpleng group activity lang, siya agad ang nagdedesisyon kung sino ang gagawa ng 
+                ganito o ganyan—hindi pa man nagtataas ng kamay, may trabaho ka na. One time, nag-group 
+                project kami, at kahit hindi naman siya ang pinili ng teacher na leader, inunahan niya na 
+                lahat. Tipong, "Ako na bahala, basta gawin n'yo lang 'to ha,....
+            </div>
+        </div>
+        <div class="post-btns"> 
+            <div class="readmore-btn"> 
+                <a href="#" class="more-btn" id="read-more-btn"> Read More </a>
+            </div>
+            <div class="reaction-btn">
+                <div class="heart-btn"> 
+                    <button class="heart" id="like-btn"><i class="fa-regular fa-heart"></i></button>
+                    <div class="like-count" id="like-count"> 706 </div>
+                </div>
+                <div class="comment-btn">
+                    <button class="comment"> <i class="fa-regular fa-comment"></i> </button>
+                    <div class="comment-count"> 3 </div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <div class="post-template">
+    <div class="post-info">
+       <div class="user"> <a class="user-profile" href = "#" >  @saintmary </a> </div> 
+       <div class="date-posted"> 16 hours ago </div>
+       <div class="post-actions">
+        <button class="action-btn"><i class="fa-solid fa-ellipsis"></i></button>
+        <div class="action-dropdown">
+         <div class="report-caret"></div>
+            <button class="report-btn">Report Post</button>
+        </div>
+    </div>
+ </div>
+
+    <div class="post-text"> 
+        <div class="post-title">  Si Kiko, ang "Mysterious Best Friend" </div>
+        <div class="post-body"> 
+            Alam mo ‘yung kaklase mong laging quiet, pero biglang may parang "special connection" sa isang teacher? 
+            Well, si Kiko, walang mintis, laging sinasabayan ang teacher sa lunch break, pero walang ibang nakakaalam 
+            kung anong nangyayari sa pagitan nila. Pag tinatanong, sasabihin lang niya, “Nothing, we're just close.” 
+            Pero yung mga kakaibang side glances at mga lihim na texts nila—sana hindi lang plato.......
+        </div>
+    </div>
+    <div class="post-btns"> 
+        <div class="readmore-btn"> 
+            <a href="#" class="more-btn" id="read-more-btn"> Read More </a>
+        </div>
+        <div class="reaction-btn">
+            <div class="heart-btn"> 
+                <button class="heart" id="like-btn"><i class="fa-regular fa-heart"></i></button>
+                <div class="like-count" id="like-count"> 203 </div>
+            </div>
+            <div class="comment-btn">
+                <button class="comment"> <i class="fa-regular fa-comment"></i> </button>
+                <div class="comment-count"> 4 </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <img src="footer-logo.png" alt="Hidden Files Logo" class="footer-logo">
+                        <p class="footer-slogan">A safe space to share what's on your mind.</p>
+                    </div>
+                    
+                    <div class="footer-nav">
+                        <a href="#">HOME</a>
+                        <a href="#">ABOUT</a>
+                        <a href="#">FAQ'S</a>
+                        <a href="#">COMMUNITY GUIDELINES</a>
+                    </div>
+                    
+                    <div class="feedback-form">
+                        <h3 class="feedback-title">FEEDBACK</h3>
+                        <textarea placeholder="Type your feedback here..."></textarea>
+                        <button class="submit-btn">Submit</button>
+                    </div>
+                </div>
+                
+                <div class="footer-divider"></div>
+                
+                <p class="copyright">© Copyright. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Profile dropdown functionality
+                const profileBtn = document.getElementById('profile-btn');
+                const profileDropdown = document.getElementById('profile-dropdown');
+                
+                profileBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    profileDropdown.classList.toggle('show');
+                });
+                
+                // Action buttons functionality for all posts
+                const actionButtons = document.querySelectorAll('.action-btn');
+                
+                actionButtons.forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        // Find the dropdown for this specific button
+                        const dropdown = this.nextElementSibling;
+                        dropdown.classList.toggle('show');
+                    });
+                });
+                      
+                // Close dropdowns when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!e.target.matches('#profile-btn') && !e.target.closest('.profile-dropdown')) {
+                        if (profileDropdown.classList.contains('show')) {
+                            profileDropdown.classList.remove('show');
+                        }
+                    }
+                    
+                    // Close all action dropdowns when clicking outside
+                    document.querySelectorAll('.action-dropdown.show').forEach(dropdown => {
+                        if (!e.target.closest('.post-actions')) {
+                            dropdown.classList.remove('show');
+                        }
+                    });
+                });
+
+                // Like button functionality for all posts
+                const likeButtons = document.querySelectorAll('.heart');
+                
+                likeButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const likeCount = this.nextElementSibling;
+                        let isLiked = this.classList.contains('liked');
+                        let likes = parseInt(likeCount.textContent);
+                        
+                        if (isLiked) {
+                            likes--;
+                            this.innerHTML = '<i class="fa-regular fa-heart"></i>';
+                        } else {
+                            likes++;
+                            this.innerHTML = '<i class="fa-solid fa-heart" style="color: #ff0000;"></i>';
+                        }
+                        
+                        this.classList.toggle('liked');
+                        likeCount.textContent = ' ' + likes;
+                    });
+                });
+            });
+
+            // Search functionality remains the same
+            const f = document.getElementById('form');
+            const q = document.getElementById('query');
+            const google = 'https://www.google.com/search?q=site%3A';
+            const site = 'hiddenfiles.com';
+
+            function submitted(event) {
+                event.preventDefault();
+                const url = google + site + '+' + q.value;
+                const win = window.open(url, '_blank');
+                win.focus();
+            }
+
+            f.addEventListener('submit', submitted);
+        </script>
+    </body>
+</html>
