@@ -18,7 +18,7 @@
             </div>
 
             <div class="searchbox-container">
-                <form role="search" id="form" action="#" method="get">
+                <form role="search" id="search-form" action="#" method="get">
                     <input type="search" id="query" name="q"
                      placeholder="Search..."
                      aria-label="Search Hidden Files">
@@ -208,6 +208,52 @@
         </div>
     </div>
 </div>
+
+<div class="report-modal" id="report-modal">
+    <div class="report-modal-content">
+        <div class="report-modal-header">
+            <h2>REPORT</h2>
+        </div>
+
+        <div class="report-modal-body">
+            <p>REASON?</p>
+            <form id="report-form"> 
+                <div class="report-options">
+                    <div class="report-option">
+                        <input type="radio" id="reason-offensive" name="report-reason" value="offensive">
+                        <label for="reason-offensive">Contains offensive or inappropriate language</label>
+                    </div>
+                    <div class="report-option">
+                        <input type="radio" id="reason-guidelines" name="report-reason" value="guidelines">
+                        <label for="reason-guidelines">Violates community guidelines</label>
+                    </div>
+                    <div class="report-option">
+                        <input type="radio" id="reason-sensitive" name="report-reason" value="sensitive">
+                        <label for="reason-sensitive">Contains sensitive or private information</label>
+                    </div>
+                    <div class="report-option">
+                        <input type="radio" id="reason-bullying" name="report-reason" value="bullying">
+                        <label for="reason-bullying">Personal attack or bullying</label>
+                    </div>
+                    <div class="report-option">
+                        <input type="radio" id="reason-others" name="report-reason" value="others">
+                        <label for="reason-others">Others</label>
+                    </div>
+                </div>
+                <div class="other-reason-container" id="other-reason-container">
+                    <textarea placeholder="Please specify your reason..." id="other-reason-text"></textarea>
+                </div>
+                <div class="report-modal-footer">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="confirm-btn">Confirm</button>
+                </div>
+            </form>
+        </div>
+
+        </div>
+    </div>
+</div>
+
         </section>
 
         <footer>
@@ -227,7 +273,7 @@
                     
                     <div class="feedback-form">
                         <h3 class="feedback-title">FEEDBACK</h3>
-                        <textarea placeholder="Type your feedback here..."></textarea>
+                        <textarea class="feedback-textarea"   placeholder="Type your feedback here..."></textarea>
                         <button class="submit-btn">Submit</button>
                     </div>
                 </div>
@@ -301,8 +347,7 @@
                 });
             });
 
-            // Search functionality remains the same
-            const f = document.getElementById('form');
+            const f = document.getElementById('search-form');
             const q = document.getElementById('query');
             const google = 'https://www.google.com/search?q=site%3A';
             const site = 'hiddenfiles.com';
@@ -315,6 +360,110 @@
             }
 
             f.addEventListener('submit', submitted);
+
+            // Report functionality
+    document.addEventListener('DOMContentLoaded', function() {
+    const reportModal = document.getElementById('report-modal');
+    const reportButtons = document.querySelectorAll('.report-btn');
+    const cancelBtn = document.querySelector('.cancel-btn');
+    const reportForm = document.getElementById('report-form');
+    const otherReasonContainer = document.getElementById('other-reason-container');
+    const otherReasonText = document.getElementById('other-reason-text');
+    const reportModalContent = document.querySelector('.report-modal-content');
+
+    // Show report modal
+    function showReportModal() {
+        reportModal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+        // Reset scroll position to top
+        reportModalContent.scrollTop = 0;
+    }
+
+    // Hide report modal
+    function hideReportModal() {
+        reportModal.classList.remove('show');
+        document.body.style.overflow = '';
+        reportForm.reset();
+        otherReasonContainer.style.display = 'none';
+        clearSelectedClasses();
+    }
+
+    // Show modal when report button is clicked
+    reportButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            showReportModal();
+        });
+    });
+
+    // Close modal when cancel button is clicked
+    cancelBtn.addEventListener('click', hideReportModal);
+
+    // Close modal when clicking outside
+    reportModal.addEventListener('click', function(e) {
+        if (e.target === reportModal) {
+            hideReportModal();
+        }
+    });
+
+    function clearSelectedClasses() {
+        document.querySelectorAll('.report-option').forEach(option => {
+            option.classList.remove('selected');
+        });
+    }
+
+    // Handle option clicks
+    document.querySelectorAll('.report-option').forEach(option => {
+        option.addEventListener('click', function(e) {
+            const radio = this.querySelector('input[type="radio"]');
+            if (e.target !== radio) {
+                radio.checked = true;
+                const event = new Event('change');
+                radio.dispatchEvent(event);
+            }
+        });
+    });
+
+    // Handle radio changes
+    document.querySelectorAll('input[name="report-reason"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            clearSelectedClasses();
+            if (this.checked) {
+                this.closest('.report-option').classList.add('selected');
+            }
+            if (this.value === 'others') {
+                otherReasonContainer.style.display = 'block';
+            } else {
+                otherReasonContainer.style.display = 'none';
+                otherReasonText.value = '';
+            }
+        });
+    });
+
+    // Handle form submission
+    reportForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const selectedReason = document.querySelector('input[name="report-reason"]:checked');
+        
+        if (!selectedReason) {
+            alert('Please select a reason for reporting.');
+            return;
+        }
+        
+        if (selectedReason.value === 'others' && !otherReasonText.value.trim()) {
+            alert('Please specify your reason for reporting.');
+            return;
+        }
+        
+        console.log('Report submitted:', {
+            reason: selectedReason.value,
+            details: selectedReason.value === 'others' ? otherReasonText.value : null
+        });
+        
+        hideReportModal();
+        alert('Thank you for your report. Our team will review it shortly.');
+    });
+});
         </script>
     </body>
 </html>
