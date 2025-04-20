@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hidden Files - Profile</title>
+  <link rel="icon" href="icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="user-style.css" />
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    function confirmDelete() {
+      if (window.confirm("Are you sure you wanna delete this post?")) {
+        alert("Post deleted!");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <a href="#"><img src="logo.png" alt="Hidden Files Logo"></a>
+    </div>
+
+    <div class="searchbox-container">
+      <form class="form-nav" role="search" id="form" action="#" method="get">
+        <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search Hidden Files">
+        <button class="search" aria-label="Search">
+          <svg viewBox="0 0 1024 1024">
+            <path class="path1"
+              d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
+            </path>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <ul class="nav-links">
+      <li>
+        <a href="#" class="notification">
+          <i class="fa-solid fa-bell"></i>
+          <span>Notification</span>
+          <span class="badge" aria-label="14 unread notifications">14</span>
+        </a>
+      </li>
+      <li class="user-container">
+        <a class="profile" href="#" id="profile-btn">GianCal</a>
+        <div class="profile-dropdown" id="profile-dropdown">
+          <div class="dropdown-caret"></div>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div class="wrapper">
+    <div class="profile-container">
+      <div class="profile-header">
+        <h2>GianCal</h2>
+        <p>@siniGIANg</p>
+        <p>maasim man bat atleast sobrang masikip</p>
+        <button class="edit-button" onclick="openModal()">Edit Profile</button>
+      </div>
+
+      <div class="section-title">My Confession</div>
+
+      <div class="confess-box">
+        <input type="text" id="confessionInput" placeholder="Confess something..." />
+        <button type="button" id="postBtn">Post</button>
+      </div>
+
+      <div class="confession-post">
+        <div class="confession-meta-header">
+          <div class="user-info-row">
+            <div class="user-info">
+              <h3 class="username">GianCal</h3>
+              <span class="timestamp">8 hrs ago</span>
+            </div>
+            <div class="post-actions">
+              <button class="action-btn"><i class="fa-solid fa-ellipsis"></i></button>
+              <div class="action-dropdown">
+                <div class="delete-caret"></div>
+                <button onclick="confirmDelete()">Delete Post</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <p class="confession-text">
+          Si Attecco, 'yung kaklase naming Grabe, parang siya na talaga ang teacher sa classroom. Kahit simpleng group
+          activity lang, siya agad ang nagdedesisyon kung sino ang gagawa ng ganito o ganyan—hindi pa man nagtataas ng
+          kamay, may trabaho ka na. One time, nag-group project kami, at kahit hindi naman siya ang pinili ng teacher na
+          leader, inunahan niya na lahat. Tipong, "Ako na bahala, basta gawin n'yo lang to ha......
+        </p>
+
+        <div class="post-btns">
+          <div class="reaction-btn">
+            <div class="heart-btn">
+              <button class="heart" id="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="like-count" id="like-count">69</div>
+            </div>
+            <div class="comment-btn">
+              <button class="comment">
+                <i class="fa-regular fa-comment"></i>
+              </button>
+              <div class="comment-count">2</div>
+            </div>
+          </div>
+          <div class="readmore-btn">
+            <a href="#" class="more-btn" id="read-more-btn">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="confession-post">
+        <div class="confession-meta-header">
+          <div class="user-info">
+            <h3 class="username">GianCal</h3>
+            <span class="timestamp">8 hrs ago</span>
+          </div>
+          <div class="post-actions">
+            <button class="action-btn"><i class="fa-solid fa-ellipsis"></i></button>
+            <div class="action-dropdown">
+              <div class="delete-caret"></div>
+              <button onclick="confirmDelete()">Delete Post</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="confession-text">
+          Si Attecco, 'yung kaklase naming Grabe, parang siya na talaga ang teacher sa classroom. Kahit simpleng group
+          activity lang, siya agad ang nagdedesisyon kung sino ang gagawa ng ganito o ganyan—hindi pa man nagtataas ng
+          kamay, may trabaho ka na. One time, nag-group project kami, at kahit hindi naman siya ang pinili ng teacher na
+          leader, inunahan niya na lahat. Tipong, "Ako na bahala, basta gawin n'yo lang to ha......
+        </p>
+
+        <div class="post-btns">
+          <div class="reaction-btn">
+            <div class="heart-btn">
+              <button class="heart" id="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="like-count" id="like-count">228</div>
+            </div>
+            <div class="comment-btn">
+              <button class="comment">
+                <i class="fa-regular fa-comment"></i>
+              </button>
+              <div class="comment-count">2</div>
+            </div>
+          </div>
+          <div class="readmore-btn">
+            <a href="#" class="more-btn" id="read-more-btn">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="confession-post">
+        <div class="confession-meta-header">
+          <div class="user-info">
+            <h3 class="username">GianCal</h3>
+            <span class="timestamp">8 hrs ago</span>
+          </div>
+          <div class="post-actions">
+            <button class="action-btn"><i class="fa-solid fa-ellipsis"></i></button>
+            <div class="action-dropdown">
+              <div class="delete-caret"></div>
+              <button onclick="confirmDelete()">Delete Post</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="confession-text">
+          Si Attecco, 'yung kaklase naming Grabe, parang siya na talaga ang teacher sa classroom. Kahit simpleng group
+          activity lang, siya agad ang nagdedesisyon kung sino ang gagawa ng ganito o ganyan—hindi pa man nagtataas ng
+          kamay, may trabaho ka na. One time, nag-group project kami, at kahit hindi naman siya ang pinili ng teacher na
+          leader, inunahan niya na lahat. Tipong, "Ako na bahala, basta gawin n'yo lang to ha......
+        </p>
+
+        <div class="post-btns">
+          <div class="reaction-btn">
+            <div class="heart-btn">
+              <button class="heart" id="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="like-count" id="like-count">143</div>
+            </div>
+            <div class="comment-btn">
+              <button class="comment" onclick="window.location.href='post.html'">
+                <i class="fa-regular fa-comment"></i>
+              </button>
+              <div class="comment-count">2</div>
+            </div>
+          </div>
+          <div class="readmore-btn">
+            <a href="#" class="more-btn" id="read-more-btn">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="footer-logo.png" alt="Hidden Files Logo" class="footer-logo">
+          <p class="footer-slogan">A safe space to share what's on your mind.</p>
+        </div>
+
+        <div class="footer-nav">
+          <a href="#">HOME</a>
+          <a href="#">ABOUT</a>
+          <a href="#">FAQ'S</a>
+          <a href="#">COMMUNITY GUIDELINES</a>
+        </div>
+
+        <div class="feedback-form">
+          <h3 class="feedback-title">FEEDBACK</h3>
+          <textarea placeholder="Type your feedback here..."></textarea>
+          <button class="submit-btn">Submit</button>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <p class="copyright">© Copyright. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modalBackdrop" style="display:none;">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <button class="back-arrow" onclick="closeModal()" aria-label="Back">&larr;</button>
+        <h2 id="modalTitle">Edit profile</h2>
+      </div>
+      <form classname="modal-form">
+        <div class="floating-label">
+          <input type="text" id="displayName" placeholder=" " value="Gian Cal" required />
+          <label for="displayName">Display Name</label>
+        </div>
+        <div class="floating-label">
+          <input type="text" id="username" placeholder=" " value="siniGIANg" required />
+          <label for="username">Username</label>
+        </div>
+        <div class="floating-label">
+          <textarea id="bio" placeholder=" " required>maasim man bat atleast sobrang masikip</textarea>
+          <label for="bio">Bio</label>
+        </div>
+        <div class="floating-label">
+          <select id="gender" required>
+            <option value="" disabled hidden></option>
+            <option selected>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+          <label for="gender">Gender</label>
+        </div>
+        <button type="button" class="save-btn" onclick="closeModal()">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Profile dropdown functionality
+      const profileBtn = document.getElementById('profile-btn');
+      const profileDropdown = document.getElementById('profile-dropdown');
+
+      profileBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        profileDropdown.classList.toggle('show');
+      });
+
+      // Action buttons functionality for all posts
+      const actionButtons = document.querySelectorAll('.action-btn');
+
+      actionButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          // Find the dropdown for this specific button
+          const dropdown = this.nextElementSibling;
+          dropdown.classList.toggle('show');
+        });
+      });
+
+      // Close dropdowns when clicking outside
+      document.addEventListener('click', function (e) {
+        if (!e.target.matches('#profile-btn') && !e.target.closest('.profile-dropdown')) {
+          if (profileDropdown.classList.contains('show')) {
+            profileDropdown.classList.remove('show');
+          }
+        }
+
+        // Close all action dropdowns when clicking outside
+        document.querySelectorAll('.action-dropdown.show').forEach(dropdown => {
+          if (!e.target.closest('.post-actions')) {
+            dropdown.classList.remove('show');
+          }
+        });
+      });
+
+      // Redirect when input is clicked (confess something.......)
+      document.getElementById('confessionInput').addEventListener('click', () => {
+        window.location.href = 'confessionfeed.html'; // writeyourconfession.html
+      });
+
+      document.getElementById('postBtn').addEventListener('click', () => {
+        window.location.href = 'confessionfeed.html'; // writeyourconfession.html
+      });
+
+
+      // Like button functionality for all posts
+      const likeButtons = document.querySelectorAll('.heart');
+
+      likeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const likeCount = this.nextElementSibling;
+          let isLiked = this.classList.contains('liked');
+          let likes = parseInt(likeCount.textContent);
+
+          if (isLiked) {
+            likes--;
+            this.innerHTML = '<i class="fa-regular fa-heart"></i>';
+          } else {
+            likes++;
+            this.innerHTML = '<i class="fa-solid fa-heart" style="color: #ff0000;"></i>';
+          }
+
+          this.classList.toggle('liked');
+          likeCount.textContent = likes;
+        });
+      });
+    });
+
+
+    // modal
+    function openModal() {
+      document.getElementById('modalBackdrop').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('modalBackdrop').style.display = 'none';
+    }
+    document.getElementById('modalBackdrop').addEventListener('click', function (e) {
+      if (e.target === this) closeModal();
+    });
+  </script>
+
+</body>
+</html>
