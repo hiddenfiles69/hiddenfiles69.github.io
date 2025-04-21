@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> Hidden Files </title>
+        <link rel="icon" href="icon.png" type = "image/x-icon">
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="post-style.css">
+    </head>
+
+    <body> 
+        <nav> 
+            <div class="logo"> 
+                <a href="#"><img src="logo.png" alt="Hidden Files Logo"></a>
+            </div>
+
+            <div class="searchbox-container">
+                <form role="search" id="search-form" action="#" method="get">
+                    <input type="search" id="query" name="q"
+                     placeholder="Search..."
+                     aria-label="Search Hidden Files">
+                    <button class="search" aria-label="Search">
+                      <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                    </button>
+                  </form>
+            </div>
+
+            <ul class="nav-links">
+                <li> <a href="#" class="confess"> <i class="fa fa-pencil"></i> Confess </a></li>
+                <li>
+                    <a href="#" class="notification"> 
+                        <i class="fa-solid fa-bell"></i>
+                        <span>Notification</span>
+                        <span class="badge" aria-label="14 unread notifications">14</span>               
+                    </a>
+                </li>
+                <li class="profile-container">
+                    <a class="profile" href="#" id="profile-btn">GianCal</a>
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <div class="dropdown-caret"></div>
+                        <a href="userprofile.html">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <section id="post">
+            <div class="post-template">
+              <div class="post-header"> 
+               <div class="back-btn"> 
+                <a href = "confessionfeed.html"> <i class="fa fa-arrow-left" aria-hidden="true"></i> </a>
+               </div> 
+                <div class="post-info">
+                   <div class="user"> <a class="user-profile" href = "userprofile.html" >  GianCal </a> </div> 
+                   <div class="timestamp"> 12 hours ago </div>
+                   <div class="post-actions">
+                    <button class="action-btn"><i class="fa-solid fa-ellipsis"></i></button>
+                    <div class="action-dropdown">
+                     <div class="report-caret"></div>
+                        <button class="report-btn">Report Post</button>
+                    </div>
+                </div>
+             </div>
+            </div> 
+
+                <div class="post-text"> 
+                    <div class="post-title"> I have this bossy na kaklase </div>
+                    <div class="post-body"> 
+                        si Attecco kaklase namin Grabe, parang siya na talaga ang teacher sa classroom. 
+                        Kahit simpleng group activity lang, siya agad ang nagdedesisyon kung sino ang gagawa 
+                        ng ganito o ganyan—hindi pa man nagtataas ng kamay, may trabaho ka na. One time, 
+                        nag-group project kami, at kahit hindi naman siya ang pinili ng teacher na leader, 
+                        inunahan niya na lahat. Tipong, "Ako na bahala, basta gawin n'yo lang 'to ha," tapos 
+                        kapag may nagsuggest ng ibang idea, deadma o kaya sasabihin niyang, "Hindi bagay." 
+                        Minsan nga, parang hindi na siya bossy, kundi power-tripping na! Pero ang mas nakakainis, 
+                        kapag maganda ang kalabasan ng project, siya ang unang nagke-claim ng credit. 
+                        Pero pag sablay? Biglang, “Eh kasi hindi kayo sumunod sa plano ko.” 
+                        Ay naku, halos buong section ata may hugot kay Trina. Pero aminado naman kaming matalino 
+                        siya—kaya lang sana bawasan niya lang konti 'yung pagka-queen boss vibes niya.
+                    </div>
+                </div>
+                <div class="post-btns"> 
+                    <div class="reaction-btn">
+                        <div class="heart-btn"> 
+                            <button class="heart" id="like-btn"><i class="fa-regular fa-heart"></i></button>
+                            <div class="like-count" id="like-count"> 706 </div>
+                        </div>
+                        <div class="comment-btn">
+                            <button class="comment" onclick="document.querySelector('#comment-box textarea').focus()"> <i class="fa-regular fa-comment"></i> </button>
+                            <div class="comment-count"> 2 </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+
+          <div class="comment-section"> 
+           <div class="comment-header"> Comments: </div>
+           <div class="comment-template">
+                <div class="comment-container">
+                    <div class="comment-info">
+                        <div class="user"> <a class="user-profile" href = "userprofile.html" >  @Nikkiyuh? </a> </div> 
+                        <div class="timestamp"> 8 hours ago </div>
+                        <div class="post-actions">
+                         <button class="action-btn"><i class="fa-solid fa-ellipsis"></i></button>
+                         <div class="action-dropdown">
+                          <div class="report-caret"></div>
+                             <button class="report-btn">Report Comment</button>
+                         </div>
+                     </div>
+                  </div>
+                </div>
+                <div class="comment-text">
+                    HAHAHA Sinooooooooooooooo Yarn?? name drop na besh.
+                </div>
+                <div class="comment-heart-btn"> 
+                    <button class="heart" id="like-btn"><i class="fa-regular fa-heart"></i></button>
+                    <div class="like-count" id="like-count"> 0 </div>
+                </div>
+           </div>
+
+           <div class="comment-template">
+            <div class="comment-container">
+                <div class="comment-info">
+                    <div class="user"> <a class="user-profile" href = "userprofile.html" >  TinayMatapang </a> </div> 
+                    <div class="timestamp"> 30 minutes ago </div>
+                    <div class="post-actions">
+                     <button class="action-btn"><i class="fa-solid fa-ellipsis"></i></button>
+                     <div class="action-dropdown">
+                      <div class="report-caret"></div>
+                         <button class="report-btn">Report Comment</button>
+                     </div>
+                 </div>
+              </div>
+            </div>
+            <div class="comment-text">
+                Hahahahha Gigil na Gigil eh
+            </div>
+            <div class="comment-heart-btn"> 
+                <button class="heart" id="like-btn"><i class="fa-regular fa-heart"></i></button>
+                <div class="like-count" id="like-count"> 0 </div>
+            </div>        
+       </div>
+
+       <div class="comment-form"> 
+        <form id="comment-box"> 
+            <textarea name="comment-input" placeholder="Write a comment here.."></textarea>
+            <button type="submit" class="sent-btn">Comment</button>
+        </form>
+    </div>
+
+    </div> 
+
+           <div class="report-modal" id="report-modal">
+            <div class="report-modal-content">
+                <div class="report-modal-header">
+                    <h2>REPORT</h2>
+                </div>
+        
+                <div class="report-modal-body">
+                    <p>REASON?</p>
+                    <form id="report-form"> 
+                        <div class="report-options">
+                            <div class="report-option">
+                                <input type="radio" id="reason-offensive" name="report-reason" value="offensive">
+                                <label for="reason-offensive">Contains offensive or inappropriate language</label>
+                            </div>
+                            <div class="report-option">
+                                <input type="radio" id="reason-guidelines" name="report-reason" value="guidelines">
+                                <label for="reason-guidelines">Violates community guidelines</label>
+                            </div>
+                            <div class="report-option">
+                                <input type="radio" id="reason-sensitive" name="report-reason" value="sensitive">
+                                <label for="reason-sensitive">Contains sensitive or private information</label>
+                            </div>
+                            <div class="report-option">
+                                <input type="radio" id="reason-bullying" name="report-reason" value="bullying">
+                                <label for="reason-bullying">Personal attack or bullying</label>
+                            </div>
+                            <div class="report-option">
+                                <input type="radio" id="reason-others" name="report-reason" value="others">
+                                <label for="reason-others">Others</label>
+                            </div>
+                        </div>
+                        <div class="other-reason-container" id="other-reason-container">
+                            <textarea placeholder="Please specify your reason..." id="other-reason-text"></textarea>
+                        </div>
+                        <div class="report-modal-footer">
+                            <button type="button" class="cancel-btn">Cancel</button>
+                            <button type="submit" class="confirm-btn">Confirm</button>
+                        </div>
+                    </form>
+                </div>
+        
+                </div>
+            </div>
+        </div>
+
+        </section>
+   
+        <footer>
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <img src="footer-logo.png" alt="Hidden Files Logo" class="footer-logo">
+                        <p class="footer-slogan">A safe space to share what's on your mind.</p>
+                    </div>
+                    
+                    <div class="footer-nav">
+                        <a href="#">HOME</a>
+                        <a href="#">ABOUT</a>
+                        <a href="#">FAQ'S</a>
+                        <a href="#">COMMUNITY GUIDELINES</a>
+                    </div>
+                    
+                    <div class="feedback-form">
+                        <h3 class="feedback-title">FEEDBACK</h3>
+                        <textarea class="feedback-textarea"   placeholder="Type your feedback here..."></textarea>
+                        <button class="submit-btn">Submit</button>
+                    </div>
+                </div>
+                
+                <div class="footer-divider"></div>
+                
+                <p class="copyright">© Copyright. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Profile dropdown functionality
+                const profileBtn = document.getElementById('profile-btn');
+                const profileDropdown = document.getElementById('profile-dropdown');
+                
+                profileBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    profileDropdown.classList.toggle('show');
+                });
+                
+                // Action buttons functionality for all posts
+                const actionButtons = document.querySelectorAll('.action-btn');
+                
+                actionButtons.forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        // Find the dropdown for this specific button
+                        const dropdown = this.nextElementSibling;
+                        dropdown.classList.toggle('show');
+                    });
+                });
+                      
+                // Close dropdowns when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!e.target.matches('#profile-btn') && !e.target.closest('.profile-dropdown')) {
+                        if (profileDropdown.classList.contains('show')) {
+                            profileDropdown.classList.remove('show');
+                        }
+                    }
+                    
+                    // Close all action dropdowns when clicking outside
+                    document.querySelectorAll('.action-dropdown.show').forEach(dropdown => {
+                        if (!e.target.closest('.post-actions')) {
+                            dropdown.classList.remove('show');
+                        }
+                    });
+                });
+
+                // Like button functionality for all posts
+                const likeButtons = document.querySelectorAll('.heart');
+                
+                likeButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const likeCount = this.nextElementSibling;
+                        let isLiked = this.classList.contains('liked');
+                        let likes = parseInt(likeCount.textContent);
+                        
+                        if (isLiked) {
+                            likes--;
+                            this.innerHTML = '<i class="fa-regular fa-heart"></i>';
+                        } else {
+                            likes++;
+                            this.innerHTML = '<i class="fa-solid fa-heart" style="color: #ff0000;"></i>';
+                        }
+                        
+                        this.classList.toggle('liked');
+                        likeCount.textContent = ' ' + likes;
+                    });
+                });
+            });
+
+            const f = document.getElementById('search-form');
+            const q = document.getElementById('query');
+            const google = 'https://www.google.com/search?q=site%3A';
+            const site = 'hiddenfiles.com';
+
+            function submitted(event) {
+                event.preventDefault();
+                const url = google + site + '+' + q.value;
+                const win = window.open(url, '_blank');
+                win.focus();
+            }
+
+            f.addEventListener('submit', submitted);
+
+            // Report functionality
+    document.addEventListener('DOMContentLoaded', function() {
+    const reportModal = document.getElementById('report-modal');
+    const reportButtons = document.querySelectorAll('.report-btn');
+    const cancelBtn = document.querySelector('.cancel-btn');
+    const reportForm = document.getElementById('report-form');
+    const otherReasonContainer = document.getElementById('other-reason-container');
+    const otherReasonText = document.getElementById('other-reason-text');
+    const reportModalContent = document.querySelector('.report-modal-content');
+
+    // Show report modal
+    function showReportModal() {
+        reportModal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+        // Reset scroll position to top
+        reportModalContent.scrollTop = 0;
+    }
+
+    // Hide report modal
+    function hideReportModal() {
+        reportModal.classList.remove('show');
+        document.body.style.overflow = '';
+        reportForm.reset();
+        otherReasonContainer.style.display = 'none';
+        clearSelectedClasses();
+    }
+
+    // Show modal when report button is clicked
+    reportButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            showReportModal();
+        });
+    });
+
+    // Close modal when cancel button is clicked
+    cancelBtn.addEventListener('click', hideReportModal);
+
+    // Close modal when clicking outside
+    reportModal.addEventListener('click', function(e) {
+        if (e.target === reportModal) {
+            hideReportModal();
+        }
+    });
+
+    function clearSelectedClasses() {
+        document.querySelectorAll('.report-option').forEach(option => {
+            option.classList.remove('selected');
+        });
+    }
+
+    // Handle option clicks
+    document.querySelectorAll('.report-option').forEach(option => {
+        option.addEventListener('click', function(e) {
+            const radio = this.querySelector('input[type="radio"]');
+            if (e.target !== radio) {
+                radio.checked = true;
+                const event = new Event('change');
+                radio.dispatchEvent(event);
+            }
+        });
+    });
+
+    // Handle radio changes
+    document.querySelectorAll('input[name="report-reason"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            clearSelectedClasses();
+            if (this.checked) {
+                this.closest('.report-option').classList.add('selected');
+            }
+            if (this.value === 'others') {
+                otherReasonContainer.style.display = 'block';
+            } else {
+                otherReasonContainer.style.display = 'none';
+                otherReasonText.value = '';
+            }
+        });
+    });
+
+    // Handle form submission
+    reportForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const selectedReason = document.querySelector('input[name="report-reason"]:checked');
+        
+        if (!selectedReason) {
+            alert('Please select a reason for reporting.');
+            return;
+        }
+        
+        if (selectedReason.value === 'others' && !otherReasonText.value.trim()) {
+            alert('Please specify your reason for reporting.');
+            return;
+        }
+        
+        console.log('Report submitted:', {
+            reason: selectedReason.value,
+            details: selectedReason.value === 'others' ? otherReasonText.value : null
+        });
+        
+        hideReportModal();
+        alert('Thank you for your report. Our team will review it shortly.');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const commentTextarea = document.querySelector('#comment-box textarea');
+    const commentForm = document.querySelector('.comment-form');
+    
+    function adjustHeight() {
+        // Reset height to get proper scrollHeight
+        commentTextarea.style.height = 'auto';
+        
+        // Calculate new height (minimum 40px, maximum 120px)
+        const newHeight = Math.min(Math.max(commentTextarea.scrollHeight, 40), 120);
+        
+        // Apply new height
+        commentTextarea.style.height = newHeight + 'px';
+        
+        // Adjust form height to match (with padding)
+        commentForm.style.height = (newHeight + 10) + 'px';
+    }
+    
+    // Initialize height
+    adjustHeight();
+    
+    // Event listeners
+    commentTextarea.addEventListener('input', adjustHeight);
+    commentTextarea.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            document.querySelector('#comment-box').submit();
+        }
+    });
+});
+        </script>
+
+
+    </body>
+</html>
