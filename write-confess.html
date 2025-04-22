@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> Hidden Files </title>
+        <link rel="icon" href="icon.png" type = "image/x-icon">
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="confess-style.css">
+    </head>
+
+    <body> 
+        <nav> 
+            <div class="logo"> 
+                <a href="#"><img src="logo.png" alt="Hidden Files Logo"></a>
+            </div>
+
+            <div class="searchbox-container">
+                <form role="search" id="search-form" action="#" method="get">
+                    <input type="search" id="query" name="q"
+                     placeholder="Search..."
+                     aria-label="Search Hidden Files">
+                    <button class="search" aria-label="Search">
+                      <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                    </button>
+                  </form>
+            </div>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="#" class="notification"> 
+                        <i class="fa-solid fa-bell"></i>
+                        <span>Notification</span>
+                        <span class="badge" aria-label="14 unread notifications">14</span>               
+                    </a>
+                </li>
+                <li class="profile-container">
+                    <a class="profile" href="#" id="profile-btn">GianCal</a>
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <div class="dropdown-caret"></div>
+                        <a href="userprofile.html">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <section id="write-confession">
+            <div class = "confess-header"> 
+                <div class="back-btn"> 
+                    <a href="#" id="back-button"> <i class="fa fa-arrow-left" aria-hidden="true"></i> </a>
+                </div> 
+                 <h1> Write a Confession </h1>  
+            </div>
+
+            <div class="confession-container">
+                <form id="confession">  
+                  <div class="confession-title"> 
+                    <textarea id="title-input" name="title-input" placeholder="Title (Optional)"></textarea>
+                    <div class="title-border"></div> <!-- Added border element -->
+                  </div>
+
+                  <div class="confession-body"> 
+                    <textarea id="body-input" name="body-input" placeholder="Tap here to start writing..."></textarea>
+                  </div>
+
+                  <div class="btn-container"> 
+                    <div class="share-as-anon">
+                        <input type="checkbox" id="anon" name="anon" value="anon">
+                        <label for="anon"> Share as anonymous </label>
+                    </div>
+
+                  <div class="postbtn-container">
+                    <button class="post-btn">Post Now</button>
+                  </div>  
+                </div>
+                </form> 
+
+              </div>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <img src="footer-logo.png" alt="Hidden Files Logo" class="footer-logo">
+                        <p class="footer-slogan">A safe space to share what's on your mind.</p>
+                    </div>
+                    
+                    <div class="footer-nav">
+                        <a href="#">HOME</a>
+                        <a href="#">ABOUT</a>
+                        <a href="#">FAQ'S</a>
+                        <a href="#">COMMUNITY GUIDELINES</a>
+                    </div>
+                    
+                    <div class="feedback-form">
+                        <h3 class="feedback-title">FEEDBACK</h3>
+                        <textarea class="feedback-textarea"   placeholder="Type your feedback here..."></textarea>
+                        <button class="submit-btn">Submit</button>
+                    </div>
+                </div>
+                
+                <div class="footer-divider"></div>
+                
+                <p class="copyright">© Copyright. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Profile dropdown functionality
+                const profileBtn = document.getElementById('profile-btn');
+                const profileDropdown = document.getElementById('profile-dropdown');
+                
+                profileBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    profileDropdown.classList.toggle('show');
+                });
+                
+                // Action buttons functionality for all posts
+                const actionButtons = document.querySelectorAll('.action-btn');
+                
+                actionButtons.forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        // Find the dropdown for this specific button
+                        const dropdown = this.nextElementSibling;
+                        dropdown.classList.toggle('show');
+                    });
+                });
+                      
+                // Close dropdowns when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!e.target.matches('#profile-btn') && !e.target.closest('.profile-dropdown')) {
+                        if (profileDropdown.classList.contains('show')) {
+                            profileDropdown.classList.remove('show');
+                        }
+                    }
+                    
+                    // Close all action dropdowns when clicking outside
+                    document.querySelectorAll('.action-dropdown.show').forEach(dropdown => {
+                        if (!e.target.closest('.post-actions')) {
+                            dropdown.classList.remove('show');
+                        }
+                    });
+                });
+                
+                    });
+              
+            const f = document.getElementById('search-form');
+            const q = document.getElementById('query');
+            const google = 'https://www.google.com/search?q=site%3A';
+            const site = 'hiddenfiles.com';
+
+            function submitted(event) {
+                event.preventDefault();
+                const url = google + site + '+' + q.value;
+                const win = window.open(url, '_blank');
+                win.focus();
+            }
+
+            f.addEventListener('submit', submitted);
+
+
+            const titleInput = document.getElementById('title-input');
+
+            function autoResize() {
+            // Reset height to auto then set to scrollHeight
+            titleInput.style.height = 'auto';
+            titleInput.style.height = `${titleInput.scrollHeight}px`;
+  
+            // Prevent multiple lines by removing newline characters
+            titleInput.value = titleInput.value.replace(/\n/g, ' ');
+            }
+
+            function preventNewLines(e) {
+            if (e.key === 'Enter') {
+            e.preventDefault();
+            }
+          }
+
+            titleInput.addEventListener('input', autoResize);
+            titleInput.addEventListener('keydown', preventNewLines);
+
+            // Initialize on load
+            autoResize();
+
+            titleInput.addEventListener('input', function() {
+            autoResize(); // keep your existing auto-resize functionality
+    
+            // Toggle the 'has-text' class based on whether there's content
+            if (this.value.trim() !== '') {
+            this.classList.add('has-text');
+            } else {
+            this.classList.remove('has-text');
+            }
+        });
+
+            // Initialize on load in case there's pre-filled content
+            if (titleInput.value.trim() !== '') {
+            titleInput.classList.add('has-text');
+        }
+
+        const bodyInput = document.getElementById('body-input');
+
+        function autoResizeBody() {
+         // Reset height to auto then set to scrollHeight
+         bodyInput.style.height = 'auto';
+        bodyInput.style.height = `${bodyInput.scrollHeight}px`;
+        }
+
+        bodyInput.addEventListener('input', autoResizeBody);
+
+        // Initialize on load
+        autoResizeBody();
+
+        // Back Button
+        document.getElementById('back-button').addEventListener('click', function(e) {
+        e.preventDefault();
+        if (window.history.length > 1) {
+        window.history.back();
+        } else {
+        window.location.href = 'confessionfeed.html'; // fallback
+        }
+    });
+
+        </script>
+
+
+    </body>
+</html>
