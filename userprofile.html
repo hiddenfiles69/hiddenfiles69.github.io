@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hidden Files - Profile</title>
+  <title> Hidden Files - Profile </title>
   <link rel="icon" href="icon.png" type="image/x-icon">
-  <link rel="stylesheet" href="user-style.css" />
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="user-style.css">
   <script>
     function confirmDelete() {
       if (window.confirm("Are you sure you wanna delete this post?")) {
@@ -26,8 +26,8 @@
     </div>
 
     <div class="searchbox-container">
-      <form class="form-nav" role="search" id="form" action="#" method="get">
-        <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search Hidden Files">
+      <form role="search" id="form-nav" action="#" method="get">
+        <input type="search" id="query" class="input-nav" placeholder="Search..." aria-label="Search Hidden Files">
         <button class="search" aria-label="Search">
           <svg viewBox="0 0 1024 1024">
             <path class="path1"
@@ -40,13 +40,14 @@
 
     <ul class="nav-links">
       <li>
-        <a href="#" class="notification">
-          <i class="fa-solid fa-bell"></i>
-          <span>Notification</span>
-          <span class="badge" aria-label="14 unread notifications">14</span>
-        </a>
+      <li></li>
+      <a href="#" class="notification">
+        <i class="fa-solid fa-bell"></i>
+        <span>Notification</span>
+        <span class="badge" aria-label="14 unread notifications">14</span>
+      </a>
       </li>
-      <li class="user-container">
+      <li class="profile-container">
         <a class="profile" href="#" id="profile-btn">GianCal</a>
         <div class="profile-dropdown" id="profile-dropdown">
           <div class="dropdown-caret"></div>
@@ -57,8 +58,16 @@
       </li>
     </ul>
   </nav>
-  <div class="wrapper">
-    <div class="profile-container">
+
+  <div class="myprofile">
+    <div class="back-btn">
+      <a href="confessionfeed.html"> <i class="fa fa-arrow-left" aria-hidden="true"></i> </a>
+    </div>
+    <h2>My Profile</h2>
+  </div>
+
+  <section id="feed">
+    <div class="user-container">
       <div class="profile-header">
         <h2>GianCal</h2>
         <p>@siniGIANg</p>
@@ -69,7 +78,7 @@
       <div class="section-title">My Confession</div>
 
       <div class="confess-box">
-        <input type="text" id="confessionInput" placeholder="Confess something..." />
+        <input class="box-input" type="text" id="confessionInput" placeholder="Confess something..." />
         <button type="button" id="postBtn">Post</button>
       </div>
 
@@ -91,7 +100,7 @@
           </div>
         </div>
 
-        <p class="confession-text">
+        <p class="post-body">
           Si Attecco, 'yung kaklase naming Grabe, parang siya na talaga ang teacher sa classroom. Kahit simpleng group
           activity lang, siya agad ang nagdedesisyon kung sino ang gagawa ng ganito o ganyan—hindi pa man nagtataas ng
           kamay, may trabaho ka na. One time, nag-group project kami, at kahit hindi naman siya ang pinili ng teacher na
@@ -107,14 +116,14 @@
               <div class="like-count" id="like-count">69</div>
             </div>
             <div class="comment-btn">
-              <button class="comment">
+              <button class="comment" onclick="window.location.href='post.html'">
                 <i class="fa-regular fa-comment"></i>
               </button>
-              <div class="comment-count">2</div>
+              <div class="comment-count">10</div>
             </div>
           </div>
           <div class="readmore-btn">
-            <a href="#" class="more-btn" id="read-more-btn">Read More</a>
+            <a href="post.html" class="more-btn" id="read-more-btn">Read More</a>
           </div>
         </div>
       </div>
@@ -133,11 +142,12 @@
           </div>
         </div>
 
-        <p class="confession-text">
-          Si Attecco, 'yung kaklase naming Grabe, parang siya na talaga ang teacher sa classroom. Kahit simpleng group
-          activity lang, siya agad ang nagdedesisyon kung sino ang gagawa ng ganito o ganyan—hindi pa man nagtataas ng
-          kamay, may trabaho ka na. One time, nag-group project kami, at kahit hindi naman siya ang pinili ng teacher na
-          leader, inunahan niya na lahat. Tipong, "Ako na bahala, basta gawin n'yo lang to ha......
+        <p class="post-body">
+          Matagal ko nang crush si Kyle. As in, since first year pa. Tahimik lang ako palagi, 
+          pero lagi ko siyang inaabangan pag papasok na sa room, tapos kunwari busy ako sa notes ko. Minsan, kunwari 
+          nagtanong ako sa kanya kahit alam ko na 'yung sagot — para lang marinig ko 'yung boses niya. Ang dami ko 
+          nang drafts ng message sa chat, pero laging hindi ko ma-send. Kasi friends kami, and I'm scared na baka 
+          pag nalaman niya,........
         </p>
 
         <div class="post-btns">
@@ -149,14 +159,14 @@
               <div class="like-count" id="like-count">228</div>
             </div>
             <div class="comment-btn">
-              <button class="comment">
+              <button class="comment" onclick="window.location.href='post.html'">
                 <i class="fa-regular fa-comment"></i>
               </button>
-              <div class="comment-count">2</div>
+              <div class="comment-count">12</div>
             </div>
           </div>
           <div class="readmore-btn">
-            <a href="#" class="more-btn" id="read-more-btn">Read More</a>
+            <a href="post.html" class="more-btn" id="read-more-btn">Read More</a>
           </div>
         </div>
       </div>
@@ -175,11 +185,12 @@
           </div>
         </div>
 
-        <p class="confession-text">
-          Si Attecco, 'yung kaklase naming Grabe, parang siya na talaga ang teacher sa classroom. Kahit simpleng group
-          activity lang, siya agad ang nagdedesisyon kung sino ang gagawa ng ganito o ganyan—hindi pa man nagtataas ng
-          kamay, may trabaho ka na. One time, nag-group project kami, at kahit hindi naman siya ang pinili ng teacher na
-          leader, inunahan niya na lahat. Tipong, "Ako na bahala, basta gawin n'yo lang to ha......
+        <p class="post-body">
+          Si Ate JE talaga, ibang level ng kaplastikan. Sa personal, super bait, pa-sweet, at 
+          laging may pa-“love u sis!” kahit kahapon lang pinagchismisan ka niya. Sa GC, todo cheer 
+          sa mga kaibigan, pero may separate GC pala na puro hanash at panlalait! Pag may sumikat 
+          na kaklase, bigla siyang close—“Miss u na bestie!” kahit hindi naman sila nagkakausap dati. 
+          Tapos ‘pag may event, uunahan ka sa group pic, pero never kang ....
         </p>
 
         <div class="post-btns">
@@ -194,16 +205,17 @@
               <button class="comment" onclick="window.location.href='post.html'">
                 <i class="fa-regular fa-comment"></i>
               </button>
-              <div class="comment-count">2</div>
+              <div class="comment-count">28</div>
             </div>
           </div>
           <div class="readmore-btn">
-            <a href="#" class="more-btn" id="read-more-btn">Read More</a>
+            <a href="post.html" class="more-btn" id="read-more-btn">Read More</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    </div>
+  </section>
 
   <footer>
     <div class="footer-container">
@@ -232,11 +244,13 @@
       <p class="copyright">© Copyright. All rights reserved.</p>
     </div>
   </footer>
-  <!-- MODAL -->
+
   <div class="modal-backdrop" id="modalBackdrop" style="display:none;">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="modal-header">
-        <button class="back-arrow" onclick="closeModal()" aria-label="Back">&larr;</button>
+        <div class="back-btn">
+          <i class="fa fa-arrow-left" onclick="closeModal()" aria-hidden="true"></i> </a>
+        </div>
         <h2 id="modalTitle">Edit profile</h2>
       </div>
       <form classname="modal-form">
@@ -354,4 +368,5 @@
   </script>
 
 </body>
+
 </html>
