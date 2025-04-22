@@ -36,14 +36,14 @@ nav {
 }
 
 .searchbox-container {
-    margin-left:80px;
+    margin-left:-144px;
     transition: transform 0.3s ease;
 }
 
 #form-nav {
     margin-top: 5px;
     border-style: solid;
-    width: 600px;
+    width: 500px;
     height: 44px;
     border-radius: 20px;
     display:flex;
