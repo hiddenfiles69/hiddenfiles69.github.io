@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> Hidden Files </title>
+        <link rel="icon" href="icon.png" type = "image/x-icon">
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="setting-style.css">
+    </head>
+
+    <body> 
+        <nav> 
+            <div class="logo"> 
+                <a href="#"><img src="logo.png" alt="Hidden Files Logo"></a>
+            </div>
+
+            <div class="searchbox-container">
+                <form role="search" id="search-form" action="#" method="get">
+                    <input type="search" id="query" name="q"
+                     placeholder="Search..."
+                     aria-label="Search Hidden Files">
+                    <button class="search" aria-label="Search">
+                      <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                    </button>
+                  </form>
+            </div>
+
+            <ul class="nav-links">
+                <li> <a href="write-confess.html" class="confess"> <i class="fa fa-pencil"></i> Confess </a></li>
+                <li>
+                    <a href="#" class="notification"> 
+                        <i class="fa-solid fa-bell"></i>
+                        <span>Notification</span>
+                        <span class="badge" aria-label="14 unread notifications">14</span>               
+                    </a>
+                </li>
+                <li class="profile-container">
+                    <a class="profile" href="#" id="profile-btn">GianCal</a>
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <div class="dropdown-caret"></div>
+                        <a href="userprofile.html">Profile</a>
+                        <a href="settings.html">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+
+        <section id="setting">
+            <div class = "setting-header"> 
+                <div class="back-btn"> 
+                    <a href="#" id="back-button"> <i class="fa fa-arrow-left" aria-hidden="true"></i> </a>
+                </div> 
+                 <h1> Account Settings </h1>  
+            </div>
+
+            <div class="setting-container"> 
+                <form id="setting-form"> 
+                    <div class="email-container">
+                        <div class="form-section">
+                            <h2>Email</h2>
+                            <div class="email-display">
+                                <span id="current-email">useremail123@gmail.com</span>
+                                <button type="button" id="edit-email-btn" class="edit-btn">Edit</button>
+                            </div>
+                            <div class="email-edit" style="display: none;">
+                                <input type="email" id="new-email" value="useremail123@gmail.com">
+                                <button type="button" id="cancel-email-btn" class="cancel-btn">Cancel</button>
+                                <button type="button" id="save-email-btn" class="save-btn">Save</button>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h2>Change Password</h2>
+                            <div class="password-fields">
+                                <div class="input-group">
+                                    <label for="current-password">Current Password</label>
+                                    <div class="password-input-container">
+                                        <input type="password" id="current-password" class="password-input">
+                                        <button type="button" class="toggle-password" aria-label="Show password">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label for="new-password">New Password</label>
+                                    <div class="password-input-container">
+                                        <input type="password" id="new-password" class="password-input">
+                                        <button type="button" class="toggle-password" aria-label="Show password">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label for="confirm-password">Confirm Password</label>
+                                    <div class="password-input-container">
+                                        <input type="password" id="confirm-password" class="password-input">
+                                        <button type="button" class="toggle-password" aria-label="Show password">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <button type="button" id="save-password-btn" class="save-changes-btn">Save Changes</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h2>Birthday</h2>
+                            <div class="birthday-display">
+                                <span id="birthday">April 4, 2000</span>
+                            </div>
+                        </div>
+
+                        <div class="form-section close-account">
+                            <h2>Close Account</h2>
+                            <p>Temporarily deactivate or permanently delete your account and profile</p>
+                            <div class="close-options">
+                                <div class="radio-group">
+                                    <input type="radio" id="deactivate-account" name="close-option" value="deactivate">
+                                    <label for="deactivate-account">Deactivate your account</label>
+                                </div>
+                                <div class="radio-group">
+                                    <input type="radio" id="delete-account" name="close-option" value="delete">
+                                    <label for="delete-account">Delete your account</label>
+                                </div>
+                            </div>
+                            <hr class="separator">
+                            <div class="save-changes-container">
+                                <button type="button" id="save-close-btn" class="all-save-changes-btn">Save All Changes</button>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </section>
+
+    
+        <footer>
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <img src="footer-logo.png" alt="Hidden Files Logo" class="footer-logo">
+                        <p class="footer-slogan">A safe space to share what's on your mind.</p>
+                    </div>
+                    
+                    <div class="footer-nav">
+                        <a href="#">HOME</a>
+                        <a href="#">ABOUT</a>
+                        <a href="#">FAQ'S</a>
+                        <a href="#">COMMUNITY GUIDELINES</a>
+                    </div>
+                    
+                    <div class="feedback-form">
+                        <h3 class="feedback-title">FEEDBACK</h3>
+                        <textarea class="feedback-textarea"   placeholder="Type your feedback here..."></textarea>
+                        <button class="submit-btn">Submit</button>
+                    </div>
+                </div>
+                
+                <div class="footer-divider"></div>
+                
+                <p class="copyright">© Copyright. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Profile dropdown functionality
+                const profileBtn = document.getElementById('profile-btn');
+                const profileDropdown = document.getElementById('profile-dropdown');
+                
+                profileBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    profileDropdown.classList.toggle('show');
+                });
+                
+                // Action buttons functionality for all posts
+                const actionButtons = document.querySelectorAll('.action-btn');
+                
+                actionButtons.forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        // Find the dropdown for this specific button
+                        const dropdown = this.nextElementSibling;
+                        dropdown.classList.toggle('show');
+                    });
+                });
+                      
+                // Close dropdowns when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!e.target.matches('#profile-btn') && !e.target.closest('.profile-dropdown')) {
+                        if (profileDropdown.classList.contains('show')) {
+                            profileDropdown.classList.remove('show');
+                        }
+                    }
+                    
+                    // Close all action dropdowns when clicking outside
+                    document.querySelectorAll('.action-dropdown.show').forEach(dropdown => {
+                        if (!e.target.closest('.post-actions')) {
+                            dropdown.classList.remove('show');
+                        }
+                    });
+                });
+
+                // Email edit functionality
+                const editEmailBtn = document.getElementById('edit-email-btn');
+                const emailDisplay = document.querySelector('.email-display');
+                const emailEdit = document.querySelector('.email-edit');
+                const cancelEmailBtn = document.getElementById('cancel-email-btn');
+                const saveEmailBtn = document.getElementById('save-email-btn');
+                const currentEmail = document.getElementById('current-email');
+                const newEmailInput = document.getElementById('new-email');
+
+                editEmailBtn.addEventListener('click', function() {
+                    emailDisplay.style.display = 'none';
+                    emailEdit.style.display = 'block';
+                });
+
+                cancelEmailBtn.addEventListener('click', function() {
+                    emailEdit.style.display = 'none';
+                    emailDisplay.style.display = 'flex';
+                    newEmailInput.value = currentEmail.textContent;
+                });
+
+                saveEmailBtn.addEventListener('click', function() {
+                    const newEmail = newEmailInput.value.trim();
+                    if (newEmail && newEmail !== currentEmail.textContent) {
+                        // Here you would typically send the new email to your server
+                        currentEmail.textContent = newEmail;
+                        emailEdit.style.display = 'none';
+                        emailDisplay.style.display = 'flex';
+                        alert('Email updated successfully!');
+                    } else {
+                        alert('Please enter a valid new email address.');
+                    }
+                });
+
+                // Password change functionality
+                const savePasswordBtn = document.getElementById('save-password-btn');
+                savePasswordBtn.addEventListener('click', function() {
+                    const currentPassword = document.getElementById('current-password').value;
+                    const newPassword = document.getElementById('new-password').value;
+                    const confirmPassword = document.getElementById('confirm-password').value;
+
+                    if (!currentPassword || !newPassword || !confirmPassword) {
+                        alert('Please fill in all password fields.');
+                        return;
+                    }
+
+                    if (newPassword !== confirmPassword) {
+                        alert('New password and confirmation do not match.');
+                        return;
+                    }
+
+                    // Here you would typically hash the passwords and send to your server
+                    alert('Password changed successfully!');
+                    document.getElementById('current-password').value = '';
+                    document.getElementById('new-password').value = '';
+                    document.getElementById('confirm-password').value = '';
+                });
+
+                // Close account functionality
+                const saveCloseBtn = document.getElementById('save-close-btn');
+                saveCloseBtn.addEventListener('click', function() {
+                    const selectedOption = document.querySelector('input[name="close-option"]:checked');
+                    if (!selectedOption) {
+                        alert('Please select an option.');
+                        return;
+                    }
+
+                    if (confirm(`Are you sure you want to ${selectedOption.value} your account? This action cannot be undone.`)) {
+                        // Here you would typically send the request to your server
+                        if (selectedOption.value === 'delete') {
+                            alert('Account deletion request sent. You will be logged out shortly.');
+                            // Redirect to logout or homepage
+                        } else {
+                            alert('Account deactivation request sent. You will be logged out shortly.');
+                            // Redirect to logout or homepage
+                        }
+                    }
+                });
+            });
+              
+            const f = document.getElementById('search-form');
+            const q = document.getElementById('query');
+            const google = 'https://www.google.com/search?q=site%3A';
+            const site = 'hiddenfiles.com';
+
+            function submitted(event) {
+                event.preventDefault();
+                const url = google + site + '+' + q.value;
+                const win = window.open(url, '_blank');
+                win.focus();
+            }
+
+            f.addEventListener('submit', submitted);
+
+            // Back Button
+            document.getElementById('back-button').addEventListener('click', function(e) {
+                e.preventDefault();
+                if (window.history.length > 1) {
+                    window.history.back();
+                } else {
+                    window.location.href = 'confessionfeed.html'; // fallback
+                }
+            });
+
+            document.querySelectorAll('.toggle-password').forEach(button => {
+    button.addEventListener('click', function() {
+        const input = this.previousElementSibling;
+        const icon = this.querySelector('i');
+        if (input.type === 'password') {
+            input.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            input.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
+    });
+});
+
+        </script>
+    </body>
+</html>
