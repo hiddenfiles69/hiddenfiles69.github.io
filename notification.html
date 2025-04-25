@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Hidden Files </title>
+  <link rel="icon" href="icon.png" type="image/x-icon">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="notif-style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <a href="#"><img src="logo.png" alt="Hidden Files Logo"></a>
+    </div>
+
+    <div class="searchbox-container">
+      <form role="search" id="search-form" action="#" method="get">
+        <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search Hidden Files">
+        <button class="search" aria-label="Search">
+          <svg viewBox="0 0 1024 1024">
+            <path class="path1"
+              d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
+            </path>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <ul class="nav-links">
+      <li> <a href="write-confess.html" class="confess"> <i class="fa fa-pencil"></i> Confess </a></li>
+      <li>
+        <a href="#" class="notification-nav">
+          <i class="fa-solid fa-bell"></i>
+          <span>Notification</span>
+          <span class="badge" aria-label="4 unread notifications">4</span>
+        </a>
+      </li>
+      <li class="profile-container">
+        <a class="profile" href="#" id="profile-btn">GianCal</a>
+        <div class="profile-dropdown" id="profile-dropdown">
+          <div class="dropdown-caret"></div>
+          <a href="userprofile.html">Profile</a>
+          <a href="settings.html">Settings</a>
+          <a href="#">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <header class="notification-header">
+    <div class="left-group">
+      <a href="#" id="back-button" class="back-btn">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      </a>
+      <h1>Notification</h1>
+    </div>
+    <button id="markAll">Mark all as read</button>
+  </header>
+
+  <!-- ===== Notifications ===== -->
+  <section class="notifications">
+    <section class="notification-card" onclick="window.location.href='post.html'">
+      <div class="top-row">
+        <div class="user-time">
+          <span class="user-info">@kakieeeni</span>
+          <span class="time">23 hrs ago</span>
+        </div>
+        <div class="post-actions">
+          <button class="action-btn"><i class="fa-solid fa-ellipsis"></i></button>
+          <div class="action-dropdown">
+            <div class="delete-caret"></div>
+            <button class="delete-btn">Delete Notification</button>
+          </div>
+        </div>
+      </div>
+      <div class="message">@kakieeeni replied to you: 'True ba 'yan? Edi sana ol nalang talaga! '"</div>
+    </section>
+
+    <section class="notification-card" onclick="window.location.href='post.html'">
+      <div class="top-row">
+        <div class="user-time">
+          <span class="user-info">selenedipity</span>
+          <span class="time">1 day ago</span>
+        </div>
+        <div class="post-actions">
+          <button class="action-btn"><i class="fa-solid fa-ellipsis"></i></button>
+          <div class="action-dropdown">
+            <div class="delete-caret"></div>
+            <button class="delete-btn">Delete Notification</button>
+          </div>
+        </div>
+      </div>
+      <div class="message">selenedipity commented on your post: 'OMG SIS I KNOW WHO THIS IS ABOUT!!</div>
+    </section>
+
+    <section class="notification-card" onclick="window.location.href='post.html'">
+      <div class="top-row">
+        <div class="user-time">
+          <span class="user-info">@BossAngeliMapagmahal</span>
+          <span class="time">3 days ago</span>
+        </div>
+        <div class="post-actions">
+          <button class="action-btn"><i class="fa-solid fa-ellipsis"></i></button>
+          <div class="action-dropdown">
+            <div class="delete-caret"></div>
+            <button class="delete-btn">Delete Notification</button>
+          </div>
+        </div>
+      </div>
+      <div class="message">@BossAngeliMapagmahal mentioned you: 'Bat parang ikaw 'to? Charot! HAHHAHAHAHAHAHAH</b>"
+      </div>
+    </section>
+
+    <section class="notification-card" onclick="window.location.href='post.html'">
+      <div class="top-row">
+        <div class="user-time">
+          <span class="user-info">raineygae</span>
+          <span class="time">4 days ago</span>
+        </div>
+        <div class="post-actions">
+          <button class="action-btn"><i class="fa-solid fa-ellipsis"></i></button>
+          <div class="action-dropdown">
+            <div class="delete-caret"></div>
+            <button class="delete-btn">Delete Notification</button>
+          </div>
+        </div>
+      </div>
+      <div class="message"> raineygae tagged you in a post: 'Shoutout sa kaibigan kong hopeless romantic—sana
+        magka-lakas loob ka na! </div>
+    </section>
+
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="footer-logo.png" alt="Hidden Files Logo" class="footer-logo">
+          <p class="footer-slogan">A safe space to share what's on your mind.</p>
+        </div>
+
+        <div class="footer-nav">
+          <a href="#">HOME</a>
+          <a href="#">ABOUT</a>
+          <a href="#">FAQ'S</a>
+          <a href="#">COMMUNITY GUIDELINES</a>
+        </div>
+
+        <div class="feedback-form">
+          <h3 class="feedback-title">FEEDBACK</h3>
+          <textarea class="feedback-textarea" placeholder="Type your feedback here..."></textarea>
+          <button class="submit-btn">Submit</button>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <p class="copyright">© Copyright. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Profile dropdown functionality
+      const profileBtn = document.getElementById('profile-btn');
+      const profileDropdown = document.getElementById('profile-dropdown');
+
+      profileBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        profileDropdown.classList.toggle('show');
+      });
+
+      // Action buttons functionality for all posts
+      const actionButtons = document.querySelectorAll('.action-btn');
+
+      actionButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // Close all other dropdowns first
+          document.querySelectorAll('.action-dropdown.show').forEach(dropdown => {
+            if (dropdown !== this.nextElementSibling) {
+              dropdown.classList.remove('show');
+            }
+          });
+
+          // Toggle this dropdown
+          const dropdown = this.nextElementSibling;
+          if (dropdown) {
+            dropdown.classList.toggle('show');
+          }
+        });
+      });
+
+      // Close dropdowns when clicking outside
+      document.addEventListener('click', function (e) {
+        // Close profile dropdown
+        if (!e.target.matches('#profile-btn') && !e.target.closest('.profile-dropdown')) {
+          if (profileDropdown.classList.contains('show')) {
+            profileDropdown.classList.remove('show');
+          }
+        }
+
+        // Close action dropdowns
+        if (!e.target.closest('.post-actions')) {
+          document.querySelectorAll('.action-dropdown.show').forEach(dropdown => {
+            dropdown.classList.remove('show');
+          });
+        }
+      });
+
+      // Back Button
+      document.getElementById('back-button').addEventListener('click', function (e) {
+        e.preventDefault();
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.location.href = 'confessionfeed.html';
+        }
+      });
+
+      // Mark All as Read functionality
+      const markAllButton = document.getElementById('markAll');
+      const notificationCards = document.querySelectorAll('.notification-card');
+
+      markAllButton.addEventListener('click', function () {
+        // Mark all notifications as read
+        notificationCards.forEach(card => {
+          card.classList.add('read');
+        });
+
+        // Update the notification badge count
+        const badge = document.querySelector('.notification-nav .badge');
+        if (badge) {
+          badge.textContent = '0';
+          badge.style.display = 'none';
+        }
+
+      });
+
+      // Hide dropdowns on scroll
+      window.addEventListener('scroll', () => {
+        document.querySelectorAll('.action-dropdown.show').forEach(dropdown => {
+          dropdown.classList.remove('show');
+        });
+        if (profileDropdown.classList.contains('show')) {
+          profileDropdown.classList.remove('show');
+        }
+      });
+
+      // Delete notification functionality
+      document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          const notificationCard = this.closest('.notification-card');
+          if (notificationCard) {
+            // Add fade out animation
+            notificationCard.style.transition = 'opacity 0.3s ease';
+            notificationCard.style.opacity = '0';
+
+            // Remove after animation completes
+            setTimeout(() => {
+              notificationCard.remove();
+
+              // Update notification count
+              updateNotificationCount();
+            }, 300);
+          }
+        });
+      });
+
+      function updateNotificationCount() {
+        const remainingNotifications = document.querySelectorAll('.notification-card').length;
+        const badge = document.querySelector('.notification-nav .badge');
+
+        if (badge) {
+          badge.textContent = remainingNotifications;
+          if (remainingNotifications === 0) {
+            badge.style.display = 'none';
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
