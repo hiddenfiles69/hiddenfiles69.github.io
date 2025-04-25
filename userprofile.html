@@ -60,8 +60,8 @@
 
   <div class="myprofile">
     <div class="back-btn">
-      <a href="confessionfeed.html"> <i class="fa fa-arrow-left" aria-hidden="true"></i> </a>
-    </div>
+     <a href="#" id="back-button"> <i class="fa fa-arrow-left" aria-hidden="true"></i> </a>
+  </div> 
     <h2>My Profile</h2>
   </div>
 
@@ -353,6 +353,15 @@
       });
     });
 
+    // Back Button
+        document.getElementById('back-button').addEventListener('click', function(e) {
+        e.preventDefault();
+        if (window.history.length > 1) {
+        window.history.back();
+        } else {
+        window.location.href = 'confessionfeed.html'; // fallback
+        }
+    });
 
     // modal
     function openModal() {
