@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up to Hidden Files</title>
+    <link rel="icon" href="icon.png" type = "image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <div class="back-button">
+        <a href="forgotpassword.html"> <i class='bx bx-arrow-back'></i></a>
+   </div>
+
+    <div class= "signup">
+    <form action="">
+        <img src="loginbg.png">
+
+        <h3>SIGN UP</h3>
+        <p style="font-size: 13px">Welcome to Hidden Files</p>
+        
+        <div class="google-option">
+            <button type="button" class="google">
+            <img src="googlelogo.jpg">
+            <p>Sign up with Google</p>
+            </button>
+            <hr>
+        </div>
+        
+        <div class="input-box">
+            <i class='bx bxs-envelope'></i>
+            <input type="text" placeholder="Email" required>
+        </div>
+
+        <div class="input-box">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="Username" required>
+        </div>
+
+        <div class="input-box">
+            <i class='bx bxs-lock-open'></i>
+            <input type="password" placeholder="Password" id="password1" required>
+            <div class="eye">
+                <i class="fa-solid fa-eye-slash" id="eyeicon1"></i>
+            </div>
+        </div>
+
+        <div class="input-box">
+            <i class='bx bxs-lock-open'></i>
+            <input type="password" placeholder="Confirm Password" id="password2" required>
+            <div class="eye">
+                <i class="fa-solid fa-eye-slash" id="eyeicon2"></i>
+            </div>
+        </div>
+
+        <div class="input-box">
+            <i class='bx bxs-calendar'></i>
+            <input type="date" required style="color: rgba(0, 0, 0, 0.325)">
+        </div>
+
+        <button type="submit" class="button" id="myButton">SIGN UP</button>
+
+        <div class="register">
+            <p>Already have an account? <a href="login.html" style="color: red">Login</a>
+        </div>
+    </form>
+    </div>
+
+       <script>
+
+            let eyeicon1 = document.getElementById("eyeicon1");
+            let password1 = document.getElementById("password1");
+        
+            eyeicon1.onclick = function() {
+                if (password1.type === "password") {
+                    password1.type = "text"; 
+                    eyeicon1.classList.remove("fa-eye-slash"); 
+                    eyeicon1.classList.add("fa-eye"); 
+                } else {
+                    password1.type = "password"; 
+                    eyeicon1.classList.remove("fa-eye"); 
+                    eyeicon1.classList.add("fa-eye-slash"); 
+                }
+            }
+
+            let eyeicon2 = document.getElementById("eyeicon2");
+            let password2 = document.getElementById("password2");
+        
+            eyeicon2.onclick = function() {
+                if (password2.type === "password") {
+                    password2.type = "text"; 
+                    eyeicon2.classList.remove("fa-eye-slash"); 
+                    eyeicon2.classList.add("fa-eye"); 
+                } else {
+                    password2.type = "password"; 
+                    eyeicon2.classList.remove("fa-eye"); 
+                    eyeicon2.classList.add("fa-eye-slash"); 
+                }
+            }
+
+        const button = document.getElementById('myButton');
+
+        button.addEventListener('click', function() {
+            button.classList.add('clicked');
+            setTimeout(() => {
+                button.classList.remove('clicked');
+            }, 300); 
+        });
+
+        </script>
+
+</body>
+</html>
